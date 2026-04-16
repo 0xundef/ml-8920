@@ -1,0 +1,35 @@
+# OS
+.DS_Store
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Model and experiment outputs
+
+# Random Forest model files (explicit rule)
+models/*random_forest*.pkl
+artifacts/
+final_model.pkl
+result.csv
+
+# Optional local data copies (uncomment if needed)
+# data/
+# dataset/
