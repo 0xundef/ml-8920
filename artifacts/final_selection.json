@@ -1,0 +1,69 @@
+{
+  "model_name": "catboost",
+  "model_family": "catboost",
+  "threshold": 0.44,
+  "params": {
+    "depth": 6,
+    "iterations": 300,
+    "l2_leaf_reg": 5.0,
+    "learning_rate": 0.03
+  },
+  "model_path": "models/optimized_catboost.cbm",
+  "feature_columns": [
+    "AGE",
+    "GENDER",
+    "RACE",
+    "DRIVING_EXPERIENCE",
+    "EDUCATION",
+    "INCOME",
+    "CREDIT_SCORE",
+    "VEHICLE_OWNERSHIP",
+    "VEHICLE_YEAR",
+    "MARRIED",
+    "CHILDREN",
+    "POSTAL_CODE",
+    "ANNUAL_MILEAGE",
+    "VEHICLE_TYPE",
+    "SPEEDING_VIOLATIONS",
+    "DUIS",
+    "PAST_ACCIDENTS"
+  ],
+  "categorical_columns": [
+    "AGE",
+    "GENDER",
+    "RACE",
+    "DRIVING_EXPERIENCE",
+    "EDUCATION",
+    "INCOME",
+    "VEHICLE_YEAR",
+    "VEHICLE_TYPE"
+  ],
+  "numeric_columns": [
+    "CREDIT_SCORE",
+    "VEHICLE_OWNERSHIP",
+    "MARRIED",
+    "CHILDREN",
+    "POSTAL_CODE",
+    "ANNUAL_MILEAGE",
+    "SPEEDING_VIOLATIONS",
+    "DUIS",
+    "PAST_ACCIDENTS"
+  ],
+  "selection_objective": "maximize recall under accuracy floor from baseline winner",
+  "accuracy_floor": 0.8545,
+  "baseline_winner": {
+    "model": "catboost",
+    "stage": "baseline",
+    "accuracy": 0.8545,
+    "precision": 0.7801242236024845,
+    "recall": 0.7485101311084624,
+    "threshold": 0.5,
+    "params_json": "{\"depth\": 6, \"iterations\": 300, \"l2_leaf_reg\": 3.0, \"learning_rate\": 0.05}",
+    "model_path": "models/baseline_catboost.cbm"
+  },
+  "final_cv_metrics": {
+    "accuracy": 0.854875,
+    "precision": 0.7568181818181818,
+    "recall": 0.7938021454112039
+  }
+}

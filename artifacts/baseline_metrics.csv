@@ -1,0 +1,4 @@
+model,stage,accuracy,precision,recall,threshold,params_json,model_path
+catboost,baseline,0.8545,0.7801242236024845,0.7485101311084624,0.5,"{""depth"": 6, ""iterations"": 300, ""l2_leaf_reg"": 3.0, ""learning_rate"": 0.05}",models/baseline_catboost.cbm
+logistic_regression,baseline,0.845375,0.772572402044293,0.7206992451330949,0.5,"{""C"": 1.0, ""class_weight"": null}",models/baseline_logistic_regression.pkl
+random_forest,baseline,0.82825,0.7451737451737451,0.6901072705601907,0.5,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 1, ""n_estimators"": 300}",models/baseline_random_forest.pkl

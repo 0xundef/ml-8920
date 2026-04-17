@@ -1,0 +1,4 @@
+model,stage,accuracy,precision,recall,threshold,params_json,meets_accuracy_floor,accuracy_floor,model_path
+random_forest,optimized_best,0.73,0.539622641509434,0.9658323400874056,0.2,"{""class_weight"": ""balanced_subsample"", ""max_depth"": 12, ""min_samples_leaf"": 3, ""n_estimators"": 500}",False,0.8545,models/optimized_random_forest.pkl
+logistic_regression,optimized_best,0.698875,0.5114455277660025,0.9586809694080254,0.2,"{""C"": 1.0, ""class_weight"": ""balanced""}",False,0.8545,models/optimized_logistic_regression.pkl
+catboost,optimized_best,0.854875,0.7568181818181818,0.7938021454112039,0.44,"{""depth"": 6, ""iterations"": 300, ""l2_leaf_reg"": 5.0, ""learning_rate"": 0.03}",True,0.8545,models/optimized_catboost.cbm
